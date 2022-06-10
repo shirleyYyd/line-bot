@@ -42,10 +42,17 @@ def handle_message(event):
     r = '很抱歉，我不太懂您的意思'#預設回傳訊息
 
 
-    if msg == 'hi':
-        r = 'hi~'
-    elif msg == '你吃飯了嗎':
+    if msg in ['hi', 'Hi']:
+        r = '嗨~'
+    elif msg in ['你吃飯了嗎', '你睡了嗎', '你上班了嗎', '你下班了嗎', '你吃了嗎']:
         r = '還沒'
+    elif msg in ['你是誰', 'who are you', 'Who are you', '你誰', '你是']:
+        r = '我是機器人'
+    elif '訂位' in msg:
+    r = '您想要訂位嗎？' 
+
+    elif '漂亮' in msg:
+        r = '謝謝'
 
     line_bot_api.reply_message(
         event.reply_token,
