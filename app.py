@@ -49,7 +49,7 @@ def handle_message(event):
     elif msg in ['你是誰', 'who are you', 'Who are you', '你誰', '你是']:
         r = '我是機器人'
     elif '訂位' in msg:
-    r = '您想要訂位嗎？' 
+        r = '您想要訂位嗎？' 
 
     elif '漂亮' in msg:
         r = '謝謝'
